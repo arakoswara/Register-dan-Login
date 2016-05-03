@@ -1,3 +1,26 @@
+## Contoh Multiple Auth Laravel 5.1
+
+* Buat database dengan nama rest-laravel (atau sesuaikan dengan keinginan bisa dilihat di file .env)
+* Silahkan lakukan migrate untuk database yang diperlukan.
+* Pada kasus ini role yang digunakan : admin dan visitor
+* file-file yang ditambahkan
+1. Controller (HomeController, UserController, AdminController, VisitorController)
+2. Model (User, Role, RoleUser)
+3. Request (AdminLoginRequest, RegisterRequest)
+4. Middleware (AuthAdmin, RoleMiddleware)
+5. View (
+	a. auth (login, register)
+	b. admin (index)
+	c. visitor (index)
+	d. master-home)
+
+* file-file yang dimodifikasi
+1. Kernel.php
+2. Middleware(RedirectIfAuthenticated)
+3. routes.php
+4. .env
+
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
