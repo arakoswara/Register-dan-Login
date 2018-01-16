@@ -24,6 +24,8 @@ class AdminController extends Controller
     {
         $user = User::findOrFail(Auth::user()->id);
 
-        return view('admin.index', compact('user'));
+        //return view('admin.index', compact('user'));
+
+        return view('admin.home.index');
     }
 }

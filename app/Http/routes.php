@@ -10,13 +10,18 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('/', [
+
+	'as' => 'login-form', 'uses' => 'HomeController@login'
+	
+]);
 
 Route::group(['prefix' => 'auth'], function()
 {	
 	/**
 	 * Handle form registration
 	 */
-	Route::get('/', [
+	Route::get('/regis', [
 
 		'as' => 'register-form', 'uses' => 'HomeController@register'
 		
@@ -41,7 +46,7 @@ Route::group(['prefix' => 'auth'], function()
 	/**
 	 * Handle form login
 	 */
-	Route::get('login', [
+	Route::get('/', [
 
 		'as' => 'login-form', 'uses' => 'HomeController@login'
 		
