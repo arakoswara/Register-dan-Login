@@ -31,7 +31,7 @@
                 </a>
                 
             </li>
-            <li class="treeview">
+            <!-- <li class="treeview">
                 <a href="#">
                 <i class="fa fa-files-o"></i>
                 <span>Layout Options</span>
@@ -53,26 +53,55 @@
                 <small class="label pull-right bg-green">new</small>
                 </span>
                 </a>
-            </li>
+            </li> -->
             
             
             <li class="treeview">
                 <a href="#">
-                <i class="fa fa-folder"></i> <span>Examples</span>
+                <i class="fa fa-folder"></i> <span>Apotik</span>
                 <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
                 </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-                    <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+                    <li><a href="{{ URL::to('admin/apotik/list') }}"><i class="fa fa-circle-o"></i> List</a></li>
+                    <li><a href="{{ URL::to('admin/apotik/create') }}"><i class="fa fa-circle-o"></i> Tambah</a></li>
+                    <li><a href="{{ URL::to('admin/apotik/edit') }}"><i class="fa fa-circle-o"></i> Edit</a></li>
                 </ul>
             </li>
-            <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
-            <li class="header">LABELS</li>
+
+            <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>Kategory Obat</span>
+                <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ URL::to('admin/kategori/list') }}"><i class="fa fa-circle-o"></i> List</a></li>
+                    <li><a href="{{ URL::to('admin/kategori/create') }}"><i class="fa fa-circle-o"></i> Tambah</a></li>
+                    <li><a href="{{ URL::to('admin/kategori/edit') }}"><i class="fa fa-circle-o"></i> Edit</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                <i class="fa fa-folder"></i> <span>Obat</span>
+                <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+                </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="{{ URL::to('admin/obat/list') }}"><i class="fa fa-circle-o"></i> List</a></li>
+                    <li><a href="{{ URL::to('admin/obat/create') }}"><i class="fa fa-circle-o"></i> Tambah</a></li>
+                    <li><a href="{{ URL::to('admin/obat/list') }}"><i class="fa fa-circle-o"></i> Edit</a></li>
+                </ul>
+            </li>
+            <li><a href=""><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+            <!-- <li class="header">LABELS</li>
             <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li> -->
         </ul>
     </section>
     <!-- /.sidebar -->

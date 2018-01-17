@@ -14,7 +14,7 @@ Route::get('/', [
 
 	'as' => 'login-form', 'uses' => 'HomeController@login'
 	
-]);
+]);+
 
 Route::group(['prefix' => 'auth'], function()
 {	
@@ -72,6 +72,20 @@ Route::get('/admin', [
 
 	'as' => 'admin-index', 'uses' => 'AdminController@index'
 ]);
+Route::group(['prefix' => 'admin'], function()
+{
+	Route::get('apotik/list', 'ApotikController@index');
+	Route::get('apotik/create', 'ApotikController@create');
+	Route::get('apotik/edit', 'ApotikController@edit');
+
+	Route::get('kategori/list', 'KategoriObatController@index');
+	Route::get('kategori/create', 'KategoriObatController@create');
+	Route::get('kategori/edit', 'KategoriObatController@edit');
+
+	Route::get('obat/list', 'ObatController@index');
+	Route::get('obat/create', 'ObatController@create');
+	Route::get('obat/edit', 'ObatController@edit');
+});
 
 /**
  * VISITOR
@@ -81,3 +95,5 @@ Route::get('/visitor', [
 
 	'as' => 'visitor-index', 'uses' => 'VisitorController@index'
  ]);
+
+Route::post('resize', 'AdminController@resize');
