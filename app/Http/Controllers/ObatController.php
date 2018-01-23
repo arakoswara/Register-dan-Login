@@ -38,15 +38,16 @@ class ObatController extends Controller
         return view('admin.obat.create', compact('apotik', 'kategori'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $post = $request->all();
+        $obat = new Obat;
+        $obat->apotik_id = $post['apotik_id'];
+        $obat->kategori_obat_id = $post['kategori_obat_id'];
+        $obat->obat_nama = $post['obat_nama'];
+        $obat->save();
+
+        return redirect('admin/obat/list');
     }
 
     /**
@@ -91,6 +92,9 @@ class ObatController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $obat = Obat::findOrFail($id);
+        $obat->delete();
+
+        return redirect('admin/obat/list');
     }
 }

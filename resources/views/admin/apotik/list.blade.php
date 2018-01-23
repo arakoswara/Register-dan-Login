@@ -30,6 +30,7 @@
                                 <th>Alamat</th>
                                 <th>Latitude</th>
                                 <th>Longitude</th>
+                                <th>Pilihan</th>
                             </tr>
                             <?php $no = 1; ?>
                             @foreach($apotiks as $apotik)
@@ -39,6 +40,10 @@
                                 <td>{{ $apotik->address }}</td>
                                 <td>{{ $apotik->lattitude }}</td>
                                 <td>{{ $apotik->longitude }}</td>
+                                <td>
+                                <a href="{{ URL::to('admin/apotik/edit') }}/{{ $apotik->apotik_id}}">Edit</a> | 
+                                <a href="{{ URL::to('admin/apotik/delete') }}/{{ $apotik->apotik_id}}">Hapus</a>
+                                </td>
                             </tr>
                             <?php $no++; ?>
                             @endforeach

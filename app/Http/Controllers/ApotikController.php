@@ -48,7 +48,16 @@ class ApotikController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = $request->all();
+
+        $apotik = new Apotik;
+        $apotik->name = $post['name_apotik'];
+        $apotik->address = $post['address'];
+        $apotik->lattitude = $post['lattitude'];
+        $apotik->longitude = $post['longitude'];
+        $apotik->save();
+
+        return redirect('admin/apotik/list');
     }
 
     /**
@@ -70,7 +79,9 @@ class ApotikController extends Controller
      */
     public function edit($id)
     {
-        //
+        $apotik = Apotik::findOrFail($id);
+
+        return view('admin.apotik.edit', compact('apotik'));
     }
 
     /**
@@ -93,6 +104,9 @@ class ApotikController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $apotik = Apotik::findOrFail($id);
+        $apotik->delete();
+
+        return redirect('admin/apotik/list');
     }
 }

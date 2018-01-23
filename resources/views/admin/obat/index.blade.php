@@ -29,6 +29,7 @@
                                 <th>Nama Obat</th>
                                 <th>Kategori Obat</th>
                                 <th>Nama Apotikt</th>
+                                <th>Pilihan</th>
                             </tr>
                             <?php $no = 1; ?>
                             @foreach($obat_list as $ob)
@@ -37,6 +38,10 @@
                                 <td>{{ $ob->obat_nama }}</td>
                                 <td>{{ $ob->nama_kategori }}</td>
                                 <td>{{ $ob->nama_apotik }}</td>
+                                <td>
+                                <a href="{{ URL::to('admin/obat/edit') }}/{{ $ob->obat_id }}">Edit</a> | 
+                                <a href="{{ URL::to('admin/obat/delete') }}/{{ $ob->obat_id }}">Hapus</a>
+                                </td>
                             </tr>
                             <?php $no++; ?>
                             @endforeach

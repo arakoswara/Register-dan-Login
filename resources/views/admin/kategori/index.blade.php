@@ -27,12 +27,17 @@
                             <tr>
                                 <th style="width: 10px">#</th>
                                 <th>Kategori Obat</th>
+                                <th>Pilihan</th>
                             </tr>
                             <?php $no = 1; ?>
                             @foreach($kategories as $kategori)
                             <tr>
                                 <td>{{ $no }}</td>
                                 <td>{{ $kategori->kategori_obat_nama }}</td>
+                                <td>
+                                    <a href="{{ URL::to('admin/kategori/edit/') }}/{{ $kategori->kategori_obat_id }}">Edit</a> | 
+                                    <a href="{{ URL::to('admin/kategori/hapus') }}/{{ $kategori->kategori_obat_id }}">Hapus</a>
+                                </td>
                             </tr>
                             <?php $no++; ?>
                             @endforeach

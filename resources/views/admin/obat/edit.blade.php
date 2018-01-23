@@ -24,7 +24,6 @@
                     <!-- /.box-header -->
                     <!-- form start -->
                     <form class="form-horizontal" method="POST" action="{{ URL::to('admin/obat/store') }}">
-                    {{ csrf_field() }}
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Apotik</label>

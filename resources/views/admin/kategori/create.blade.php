@@ -23,12 +23,13 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" method="POST" action="{{ URL::to('admin/kategori/store') }}">
+                    {{ csrf_field() }}
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-2 control-label">Kategori Obat</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword3" placeholder="eg : Generik">
+                                    <input type="text" class="form-control" name="kategori_obat_nama" placeholder="eg : Generik">
                                 </div>
                             </div>
                         </div>

@@ -23,12 +23,13 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" method="POST" action="{{ URL::to('admin/apotik/store') }}">
+                    {{ csrf_field() }}
                         <div class="box-body">
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-2 control-label">Nama Apotik</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword3" placeholder="eg : Apotik Taman Solo">
+                                    <input type="text" class="form-control" id="inputPassword3" placeholder="eg : Apotik Taman Solo" name="name_apotik">
                                 </div>
                             </div>
                         </div>
@@ -37,7 +38,7 @@
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-2 control-label">Lattitude</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword3" placeholder="">
+                                    <input type="text" class="form-control" id="inputPassword3" placeholder="" name="lattitude">
                                 </div>
                             </div>
                         </div>
@@ -46,7 +47,7 @@
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-2 control-label">Longitude</label>
                                 <div class="col-sm-10">
-                                    <input type="password" class="form-control" id="inputPassword3" placeholder="">
+                                    <input type="text" class="form-control" id="inputPassword3" placeholder="" name="longitude">
                                 </div>
                             </div>
                         </div>
@@ -55,7 +56,7 @@
                             <div class="form-group">
                                 <label for="inputPassword3" class="col-sm-2 control-label">Alamat</label>
                                 <div class="col-sm-10">
-                                    <textarea type="password" class="form-control" id="inputPassword3" placeholder=""></textarea>
+                                    <textarea type="text" class="form-control" id="inputPassword3" placeholder="" name="address"></textarea>
                                 </div>
                             </div>
                         </div>
